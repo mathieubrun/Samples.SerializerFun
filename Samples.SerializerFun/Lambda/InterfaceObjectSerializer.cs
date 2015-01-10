@@ -1,8 +1,8 @@
-﻿namespace Samples.SerializerFun.ReflectionBased
+﻿namespace Samples.SerializerFun.Lambda
 {
     using System;
 
-    public class FastInterfaceObjectSerializer : FastDefaultObjectSerializer
+    public class FastInterfaceObjectSerializer : DefaultObjectSerializer
     {
         public FastInterfaceObjectSerializer(RootSerializer root)
             : base(root)

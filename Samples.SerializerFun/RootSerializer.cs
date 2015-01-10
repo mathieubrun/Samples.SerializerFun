@@ -1,4 +1,4 @@
-﻿namespace Samples.SerializerFun.ReflectionBased
+﻿namespace Samples.SerializerFun
 {
     using System;
     using System.Collections.Generic;

@@ -1,4 +1,4 @@
-﻿namespace Samples.SerializerFun.Tests
+﻿namespace Samples.SerializerFun.Tests.Lambda
 {
     using System;
     using System.IO;

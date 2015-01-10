@@ -1,14 +1,14 @@
-﻿namespace Samples.SerializerFun
+﻿namespace Samples.SerializerFun.Lambda
 {
     using System;
     using System.IO;
     using Samples.SerializerFun.ReflectionBased;
 
-    public class FastReflectionSerializer
+    public class ReflectionSerializer
     {
         private readonly RootSerializer rootSerializer;
 
-        public FastReflectionSerializer()
+        public ReflectionSerializer()
         {
             this.rootSerializer = new RootSerializer();
 
@@ -22,7 +22,7 @@
                         new FastInterfaceObjectSerializer(this.rootSerializer),
                         new NullableSerializer(this.rootSerializer),
                         new ArraySerializer(this.rootSerializer),
-                        new FastDefaultObjectSerializer(this.rootSerializer)
+                        new DefaultObjectSerializer(this.rootSerializer)
                     }
                 }
             };

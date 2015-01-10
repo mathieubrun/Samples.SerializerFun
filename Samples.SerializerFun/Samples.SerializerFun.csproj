@@ -41,23 +41,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FastReflectionSerializer.cs" />
+    <Compile Include="Lambda\ReflectionSerializer.cs" />
     <Compile Include="ExtendedBinaryWriter.cs" />
     <Compile Include="ExtendedBinaryReader.cs" />
-    <Compile Include="ReflectionBased\ArraySerializer.cs" />
-    <Compile Include="ReflectionBased\FastInterfaceObjectSerializer.cs" />
-    <Compile Include="ReflectionBased\FastDefaultObjectSerializer.cs" />
-    <Compile Include="ReflectionBased\InterfaceObjectSerializer.cs" />
-    <Compile Include="ReflectionBased\RootSerializer.cs" />
-    <Compile Include="ReflectionBased\SubSerializerBase.cs" />
-    <Compile Include="ReflectionBased\DefaultObjectSerializer.cs" />
-    <Compile Include="ReflectionBased\NullableSerializer.cs" />
-    <Compile Include="ReflectionBased\ObjectSerializer.cs" />
-    <Compile Include="ReflectionBased\ISubSerializer.cs" />
-    <Compile Include="ReflectionBased\SimpleSerializer.cs" />
-    <Compile Include="ReflectionSerializer.cs" />
-    <Compile Include="Serializer.cs" />
+    <Compile Include="ArraySerializer.cs" />
+    <Compile Include="Lambda\InterfaceObjectSerializer.cs" />
+    <Compile Include="Lambda\DefaultObjectSerializer.cs" />
+    <Compile Include="Reflection\InterfaceObjectSerializer.cs" />
+    <Compile Include="RootSerializer.cs" />
+    <Compile Include="SubSerializerBase.cs" />
+    <Compile Include="Reflection\DefaultObjectSerializer.cs" />
+    <Compile Include="NullableSerializer.cs" />
+    <Compile Include="ObjectSerializer.cs" />
+    <Compile Include="ISubSerializer.cs" />
+    <Compile Include="SimpleSerializer.cs" />
+    <Compile Include="Reflection\ReflectionSerializer.cs" />
+    <Compile Include="Lambda\Serializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reflection\Serializer.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

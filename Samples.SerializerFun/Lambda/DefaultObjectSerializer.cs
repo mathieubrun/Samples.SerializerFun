@@ -1,4 +1,4 @@
-﻿namespace Samples.SerializerFun.ReflectionBased
+﻿namespace Samples.SerializerFun.Lambda
 {
     using System;
     using System.Collections.Concurrent;
@@ -7,7 +7,7 @@
     using System.Reflection;
     using System.Runtime.Serialization;
 
-    public class FastDefaultObjectSerializer : SubSerializerBase
+    public class DefaultObjectSerializer : SubSerializerBase
     {
         private ObjectIDGenerator idGenerator = new ObjectIDGenerator();
 
@@ -23,7 +23,7 @@
         /// </summary>
         private ConcurrentDictionary<Type, Func<ExtendedBinaryReader, object, object>> setters = new ConcurrentDictionary<Type, Func<ExtendedBinaryReader, object, object>>();
 
-        public FastDefaultObjectSerializer(RootSerializer root)
+        public DefaultObjectSerializer(RootSerializer root)
             : base(root)
         {
         }
@@ -189,7 +189,7 @@
 
             var thisAsMethodTarget = Expression.Constant(this);
 
-            var methodToCall = typeof(FastDefaultObjectSerializer).GetMethod("DeserializeBase");
+            var methodToCall = typeof(DefaultObjectSerializer).GetMethod("DeserializeBase");
             var deserializedTypeAsObject = Expression.TypeAs(deserializedType, typeof(object));
 
             foreach (var field in type.GetFields(BindingFlags.NonPublic | BindingFlags.Instance | BindingFlags.Public))

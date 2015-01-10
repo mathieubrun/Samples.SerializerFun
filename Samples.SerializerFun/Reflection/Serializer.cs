@@ -1,4 +1,4 @@
-﻿namespace Samples.SerializerFun
+﻿namespace Samples.SerializerFun.Reflection
 {
     using System;
     using System.IO;
@@ -12,14 +12,14 @@
 
         public static void Serialize(object ob, Stream stream, Type t)
         {
-            var s = new FastReflectionSerializer();
+            var s = new ReflectionSerializer();
 
             s.Serialize(stream, ob, t);
         }
 
         public static object Deserialize(Stream s, Type t)
         {
-            var ser = new FastReflectionSerializer();
+            var ser = new ReflectionSerializer();
 
             var x = ser.Deserialize(s, t);
 
